@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+    <h2>Latest Mars News</h2>
+    <h5>{{ mars_facts.news_title }}</h3>
+    <p>{{ mars_facts.news_p }}</p>
+    <h2>Featured Mars Image</h2>
+    <img src="{{ mars_facts.featured_image_url }}" alt="Featured Image" style="width:450px;height:300px;">
+    <h2>Current Weather on Mars</h2>
+    <p>{{ mars_facts.mars_weather }}</p>
+    <h2>Mars Facts</h2>
+    <p>{{ mars_facts.html_table|safe }}</p>
+    <h2>Mars Hemispheres</h2>
+    <p>{{ mars_facts.hemisphere_image_urls[0].title }}</p>
+    <img src="{{ mars_facts.hemisphere_image_urls[0].image_url }}" alt="Featured Image" style="width:300px;height:300px;">
+    <p>{{ mars_facts.hemisphere_image_urls[1].title }}</p>
+    <img src="{{ mars_facts.hemisphere_image_urls[1].image_url }}" alt="Featured Image" style="width:300px;height:300px;">
+    <p>{{ mars_facts.hemisphere_image_urls[2].title }}</p>
+    <img src="{{ mars_facts.hemisphere_image_urls[2].image_url }}" alt="Featured Image" style="width:300px;height:300px;">
+    <p>{{ mars_facts.hemisphere_image_urls[3].title }}</p>
+    <img src="{{ mars_facts.hemisphere_image_urls[3].image_url }}" alt="Featured Image" style="width:300px;height:300px;">
+  </div>
+</body>
+
+</html>
